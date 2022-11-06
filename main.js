@@ -12,9 +12,13 @@
   
   window.onload = function () {
     startButton = document.getElementById("start");
+    console.log(startButton);
     stopButton = document.getElementById("stop");
+    console.log(stopButton);
     resetButton = document.getElementById("reset");
-    countTime = document.getElementById("time");
+    console.log(resetButton);
+    countTime = document.getElementById("count");
+    console.log(countTime);
 }
   
   
