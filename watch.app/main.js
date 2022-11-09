@@ -72,7 +72,7 @@
       
     elapsedTime =Date.now() - startTime + holdTime;
     countTime.textContent = "0:0:0:0"
-    countTime.textContent =new Date(elapsedTime).toISOString().slice(12,21);
+    countTime.textContent =new Date(elapsedTime).toISOString().slice(12,22);
     
     measureTime();
   },10);
