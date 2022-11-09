@@ -23,22 +23,25 @@
   
   
   
-  function displayTime() {
+  function countTime() {
     const currentTime = new Date(Date.now() - startTime + holdTime);
     const h = String(currentTime.getHours()-1).padStart(1,'0');
     const m = String(currentTime.getMinutes()).padStart(1,'0');
     const s = String(currentTime.getSeconds()).padStart(1,'0');
     const ms = String(currentTime.getMilliseconds()).padStart(1,'0');
+    
+
   }
   
   function start() {
+    console.log(countTime.innerHTML);
     startTime =Date.now();
     measureTime();
     
     startButton.disabled = true;
     stopButton.disabled = false;
     resetButton.disabled = false;
-    
+  
   }
   
   function stop() {
@@ -64,10 +67,12 @@
   }
   
   function measureTime() {
+    
     timer =setTimeout(function(){
       
     elapsedTime =Date.now() - startTime + holdTime;
-    countTime.textContent =new Date(elapsedTime).toISOString().slice(14, 23);
+    countTime.textContent = "0:0:0:0"
+    countTime.textContent =new Date(elapsedTime).toISOString().slice(12,21);
     
     measureTime();
   },10);
